@@ -1,20 +1,36 @@
 import React from 'react'
 import './Header.css'
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton } from '@mui/material';
+import { Avatar, IconButton } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import AppsIcon from '@mui/icons-material/Apps';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Header() {
     return (
         <div className="header">
-            {/* <h2>This is a header</h2>             */}
+            {/* <h2>This is a header</h2> */}
             <div className="header__left">
                 <IconButton>
                     <MenuIcon />
                 </IconButton>
-                <img src="https://cdn.vox-cdn.com/thumbor/8fWz6qpiMYMsZhY4vrc9Vhl5yL8=/0x110:1320x770/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/21939811/newgmaillogo.jpg" alt="" />
+                <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="" />
             </div>
-            <div className="header__middle"></div>
-            <div className="header__right"></div>
+            <div className="header__middle">
+                <SearchIcon />
+                <input placeholder="Search mail" type="text" />
+                <ArrowDropDownIcon className="header__imputCaret" />
+            </div>
+            <div className="header__right">
+                <IconButton>
+                    <AppsIcon />
+                </IconButton>
+                <IconButton>
+                    <NotificationsIcon />
+                </IconButton>
+                <Avatar />
+            </div>
         </div>
     )
 }
