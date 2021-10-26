@@ -24,7 +24,7 @@
     align-items: center;
     background-color: whitesmoke;
     padding: 6px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .header__middle > .MuiSvgIcon-root {
