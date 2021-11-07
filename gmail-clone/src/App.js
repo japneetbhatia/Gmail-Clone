@@ -6,7 +6,7 @@ import Mail from './Containers/Mail';
 import EmailList from './Components/EmailList';
 import {
   BrowserRouter as Router,
-  Routes ,
+  Switch ,
   Route,
   // Link
 } from "react-router-dom";
@@ -18,14 +18,14 @@ function App() {
         <Header />
         <div className="app__body">
           <Sidebar />
-          <Routes >
+          <Switch >
             <Route path = "/mail">
               <Mail />
             </Route>
             <Route path = "/">
               <EmailList />
             </Route>
-          </Routes >
+          </Switch >
         </div>
         {/* <h2>Building Gmail</h2> */}
       </div>
