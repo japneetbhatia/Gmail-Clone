@@ -13,12 +13,20 @@ import {
 } from "react-router-dom";
 import { selectSendMessageIsOpen } from './features/mailSlice';
 import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
+import Login from './Containers/Login';
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen)
+  const user = userSelector(selectUser);
+
   return (
     <Router>
-      <div className="App">
+
+      {!user ? (
+        <Login />
+      ) : (
+        <div className="App">
         <Header />
         <div className="app__body">
           <Sidebar />
@@ -34,9 +42,9 @@ function App() {
         {/* <h2>Building Gmail</h2> */}
           {sendMessageIsOpen && <SendMail />}
       </div>
+      )}
     </Router>
   );
 }
 
 export default App;
-
