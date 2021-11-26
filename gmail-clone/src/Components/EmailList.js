@@ -1,19 +1,36 @@
-import { Checkbox,IconButton } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import './EmailList.css';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import RedoIcon from '@material-ui/icons/Redo';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import SettingsIcon from '@material-ui/icons/Settings';
-import KeyboardHideIcon from '@material-ui/icons/KeyboardHide';
-import Section from './Section';
-import InboxIcon from '@material-ui/icons/Inbox';
-import PeopleIcon from '@material-ui/icons/People';
-import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+// import { Checkbox,IconButton } from '@material-ui/core';
+// import React, { useEffect, useState } from 'react';
+// import './EmailList.css';
+// import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+// import RedoIcon from '@material-ui/icons/Redo';
+// import MoreVertIcon from '@material-ui/icons/MoreVert';
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import SettingsIcon from '@material-ui/icons/Settings';
+// import KeyboardHideIcon from '@material-ui/icons/KeyboardHide';
+// import Section from './Section';
+// import InboxIcon from '@material-ui/icons/Inbox';
+// import PeopleIcon from '@material-ui/icons/People';
+// import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+// import EmailRow from './EmailRow';
+// import { db } from '../firebase';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import { Checkbox, IconButton } from '@mui/material'
+import React, {useEffect, useState} from 'react'
+import "./EmailList.css"
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import RedoIcon from '@mui/icons-material/Redo';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
+import SettingsIcon from '@mui/icons-material/Settings';
+import Inbox from '@mui/icons-material/Inbox';
+import Section from "./Section";
+import PeopleIcon from '@mui/icons-material/People';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import EmailRow from './EmailRow';
 import { db } from '../firebase';
+
 
 
 
@@ -71,7 +88,7 @@ function EmailList() {
             </div>
 
             <div className='emailList__sections'>
-                <Section Icon={InboxIcon} title='primary'color='red' selected />
+                <Section Icon={Inbox} title='primary'color='red' selected />
 
                 <Section Icon={PeopleIcon} title='Social' color='#1A73EB'/>
 
